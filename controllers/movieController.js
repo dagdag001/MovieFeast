@@ -25,7 +25,6 @@ export const getAllMovies = async (req, res) => {
         },
       }
     );
-
     const movies = response.data.results.map(
       ({ title, id, poster_path, vote_average, vote_count }) => ({
         title,
@@ -35,8 +34,11 @@ export const getAllMovies = async (req, res) => {
         vote_count,
       })
     );
-    console.log("all");
-    res.status(StatusCodes.OK).json(movies);
+    res.status(StatusCodes.OK).json({
+      movies,
+      page: response.data.page,
+      total_pages: response.data.total_pages,
+    });
   } catch (error) {
     console.error(
       "Error fetching popular movies:",
