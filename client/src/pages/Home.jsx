@@ -9,7 +9,7 @@ import GlobalStyles from "../assets/Wrappers/GlobalStyles";
 const Home = () => {
   const getInitialTheme = () => {
     const storedTheme = localStorage.getItem("theme");
-    return storedTheme === "light" ? lightTheme : darkTheme;
+    return storedTheme === "dark" ? darkTheme : lightTheme;
   };
 
   const [currentTheme, setCurrentTheme] = useState(getInitialTheme);
