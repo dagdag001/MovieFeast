@@ -19,8 +19,8 @@ import { useState, useEffect } from "react";
 export const movieLoader = async ({ params }) => {
   const { id } = params;
   try {
-    const response = await axios.get(`/api/v1/movies/embed/${id}`);
-    const moveInfo = await axios.get(`/api/v1/movies/info/${id}`);
+    const response = await axios.get(`/v1/movies/embed/${id}`);
+    const moveInfo = await axios.get(`/v1/movies/info/${id}`);
     return { url: response.data.url, id, title: moveInfo.data.title };
   } catch (error) {
     throw new Response("Movie not found", { status: 404 });

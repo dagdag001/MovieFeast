@@ -25,7 +25,7 @@ export const loader = async ({ request }) => {
 
   try {
     const { data } = await axios.get(
-      `/api/v1/movies/search?query=${encodeURIComponent(query)}&page=${page}`
+      `/v1/movies/search?query=${encodeURIComponent(query)}&page=${page}`
     );
     return data; // { page, total_pages, movies }
   } catch (error) {
@@ -47,7 +47,6 @@ const SearchPage = () => {
     <div className="search-results-page">
       <div className="search-header">
         <h2>Search Results for "{query}"</h2>
-
       </div>
 
       <MoviesWrapper>

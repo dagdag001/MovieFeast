@@ -20,7 +20,7 @@ export const moviesLoader = async ({ request }) => {
   const page = url.searchParams.get("page") || "1";
 
   try {
-    const response = await axios.get(`/api/v1/movies?page=${page}`);
+    const response = await axios.get(`/v1/movies?page=${page}`);
     return {
       movies: response.data.movies,
       page: response.data.page,
