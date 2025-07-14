@@ -27,8 +27,9 @@ export const MoviesWrapper = styled.div`
 
   @media (max-width: 480px) {
     grid-template-columns: 1fr;
-    gap: 1rem;
-    padding: 1rem;
+    gap: 1.25rem;
+    padding: 1rem 0.75rem;
+    row-gap: 1.5rem;
   }
 `;
 
