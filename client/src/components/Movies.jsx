@@ -21,7 +21,6 @@ export const moviesLoader = async ({ request }) => {
 
   try {
     const response = await axios.get(`/api/v1/movies?page=${page}`);
-    console.log(response);
     return {
       movies: response.data.movies,
       page: response.data.page,
