@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Link, useRouteError } from "react-router-dom";
-import Wrapper from "../assets/wrappers/ErrorPage";
+import Wrapper from "../assets/Wrappers/ErrorPage";
 import errorImage from "../assets/images/page-not-found.svg";
 
 const Error = () => {
@@ -13,6 +13,7 @@ const Error = () => {
     };
   }, []);
 
+  
   return (
     <Wrapper>
       <img src={errorImage} alt="Error background" className="error-image" />
