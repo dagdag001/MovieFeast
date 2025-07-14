@@ -17,7 +17,7 @@ import {
 export const loader = async ({ params }) => {
   const { id } = params;
   try {
-    const response = await axios.get(`/api/v1/movies/info/${id}`);
+    const response = await axios.get(`/v1/movies/info/${id}`);
     return response.data;
   } catch (error) {
     throw new Response("Movie not found", { status: 404 });
